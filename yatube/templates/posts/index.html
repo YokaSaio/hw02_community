@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title%}
-  <title>Последние обновления на сайте</title>
+Последние обновления на сайте
 {% endblock %}
 {% block content %}
   <h1>Последние обновления на сайте</h1>
@@ -20,5 +20,4 @@
   {% endif %}
   {% if not forloop.last %}<hr>{% endif %}
 {% endfor %}
-</div>
 {% endblock %}
