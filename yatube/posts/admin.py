@@ -23,7 +23,7 @@ class GroupAdmin(admin.ModelAdmin):
         'slug',
     )
 
-    prepopulated_fields = {"slug": ("title",)}
+    prepopulated_fields = {'slug': ('title',)}
 
 
 admin.site.register(Post, PostAdmin)
