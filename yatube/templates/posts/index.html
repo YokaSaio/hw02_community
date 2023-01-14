@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title%}
-Последние обновления на сайте
+  Последние обновления на сайте
 {% endblock %}
 
 {% block content %}
   <h1>Последние обновления на сайте</h1>
-    {% for post in posts %}
+  {% for post in posts %}
     <article>
       <li>
         Автор: {{ post.author.get_full_name }}
@@ -14,10 +14,10 @@
       <li>
         Дата публикации: {{ post.pub_date|date:"d E Y" }}
       </li>
-    </article>
     <p>{{ post.text|linebreaksbr }}</p>
     {% if post.group %}
-    <a href="{% url 'posts:group_list' post.group.slug %}">Все записи группы</a>
+      <a href="{% url 'posts:group_list' post.group.slug %}">Все записи группы</a>
+    </article>
     {% endif %}
     {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
